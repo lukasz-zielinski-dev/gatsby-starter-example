@@ -11,7 +11,6 @@ const StyledContainer = styled.div`
 `
 
 export default function Foo({ data }) {
-  console.log(data);
   return (
     <Layout>
       <StyledContainer>

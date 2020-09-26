@@ -11,7 +11,7 @@ Dzięki pluginowi `gatsby-transformer-remark` jego zawartość zostanie zamienio
  - Lista
  - testowa
 
-~~Nie aktualne~~
+~~Nieaktualne~~
 
 ![Photo by Charles Deluvio](https://images.unsplash.com/photo-1530041539828-114de669390e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)
 
