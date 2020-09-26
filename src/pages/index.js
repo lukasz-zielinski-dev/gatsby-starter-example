@@ -1,13 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from "styled-components"
+
+import Layout from "../components/Layout"
+import welcomeImage from "../../static/undraw_welcome_cats_thqn.png"
+
+const StyledWelcomeImage = styled.div`
+  background-image: url(${welcomeImage});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 70vw;
+  min-height: calc(619/1129*70vw);
+
+  margin: 50px auto;
+`
 
 export default function Home() {
   return (
-    <>
-      <div>Hello world!</div>
-      <button>
-        <Link to="/foo">Go to foo page page</Link>
-      </button>
-    </>
+    <Layout>
+        <StyledWelcomeImage></StyledWelcomeImage>
+    </Layout>
   )
 }

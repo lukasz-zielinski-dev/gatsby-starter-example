@@ -1,13 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
+import Layout from "../components/Layout"
+
+import styled from "styled-components"
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
 export default function Foo() {
   return (
-    <>
-      <div>Foo page!</div>
-      <button>
-        <Link to="/">Go to index</Link>
-      </button>
-    </>
+    <Layout>
+      <StyledContainer>
+        <h1>Foo page!</h1>
+      </StyledContainer>
+    </Layout>
   )
 }
