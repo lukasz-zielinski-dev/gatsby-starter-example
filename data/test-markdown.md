@@ -5,7 +5,7 @@ date: "2020-09-25"
 
 ## Hej!
 
-To testowy plik **mardown**.
+To testowy plik **markdown**.
 Dzięki pluginowi `gatsby-transformer-remark` jego zawartość zostanie zamieniona w html.
 
  - Lista
