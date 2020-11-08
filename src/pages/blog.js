@@ -1,5 +1,7 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { Link } from "gatsby"
+import { graphql } from "gatsby"
+
 import Layout from "../components/Layout"
 
 import styled from "styled-components"
@@ -14,16 +16,14 @@ export default function Foo({ data }) {
   return (
     <Layout>
       <StyledContainer>
-        <h1>Foo page!</h1>
+        <h1>Najnowsze wpisy:</h1>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <h3>
-              {node.frontmatter.title}{" "}
-              <span>
-                — {node.frontmatter.date}
-              </span>
-            </h3>
-            <div dangerouslySetInnerHTML={{ __html: node.html}} />
+            <Link to={node.fields.slug}>
+              <h2>
+                {node.frontmatter.title} - {node.frontmatter.date}
+              </h2>
+            </Link>
             <hr />
           </div>
         ))}
@@ -34,15 +34,16 @@ export default function Foo({ data }) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: {order: ASC, fields: frontmatter___date}) {
+    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       edges {
         node {
-          id
           frontmatter {
             title
             date(formatString: "DD.MM.YYYY")
           }
-          html
+          fields {
+            slug
+          }
         }
       }
     }

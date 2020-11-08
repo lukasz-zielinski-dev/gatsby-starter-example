@@ -35,13 +35,13 @@ const Layout = ({ children }) => {
           <StyledTitle>
             <StyledLink to="/">Gatsby - poligon testowy</StyledLink>
           </StyledTitle>
-          <StyledLink to="/foo">
+          <StyledLink to="/blog">
             <Button
               variant="outlined"
               color="secondary"
               startIcon={<FilterVintageIcon />}
             >
-              Foo
+              Blog
             </Button>
           </StyledLink>
         </Toolbar>
