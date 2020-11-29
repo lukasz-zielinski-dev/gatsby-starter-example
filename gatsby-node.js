@@ -8,7 +8,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: `/blog${slug}`,
+      value: `${slug}`,
     })
   }
 }
@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  
+
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
